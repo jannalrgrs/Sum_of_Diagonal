@@ -7,44 +7,23 @@ public class CodeChallenge {
 		Scanner scan1 = new Scanner(System.in);
 		Random randomNumber = new Random();
 		
-		System.out.println("Enter the size of the square: ");
+		System.out.println("Enter size of square:");
 		int size = scan1.nextInt();
-		int [][] matrix = new int [size][size];
+		int [][] matrix = new int [size][size]; // determines dimensions of square matrix
 		
-		//determine the elements:
-		 
-			for (int i = 0; i < matrix.length; i++) {
-				 for(int j = 0; j < matrix[i].length; j++){
-					 matrix [i][j] = randomNumber.nextInt(100000);
-					 					
-			 System.out.printf("%4d\t" ,matrix[i][j]); //make sure print f to get the tab
-	
+		for (int i = 0; i< matrix.length; i++){
+			for (int j = 0; j<matrix.length; j++){
+				
+			matrix [i][j] = randomNumber.nextInt(100000); // or whatever random number between 1 through top random.
+			System.out.println(matrix [i][j]);
+			
+			}
+			
 		}
-				 System.out.println();
-	
-		} //for loop brackets
+			
+	}
+}
 
-		 
-					int sumOfDiag = 0;	 
-	
-					 for (int i = 0; i < size; i++) {
-					sumOfDiag = sumOfDiag + matrix [i][i];
-					 }
-						 
-						 System.out.println("the sum is " + sumOfDiag); 
-						 
-						 int elements = sumOfDiag / matrix.length;
-						 
-						 // elements is the size
-						 System.out.println("the average of the diagonal is " + elements);
-		 
-		 
-			 }
-	
-
-	
-			 }
-	
 
 		
 		
